@@ -5,6 +5,7 @@ class Signin extends Component {
 
   handleFormSubmit({ email, password }) {
     console.log(email, password);
+
   }
 
   render() {
@@ -16,7 +17,8 @@ class Signin extends Component {
           <fieldset className="form-group">
             <label>Email:</label>
             <input {...email} className="form-control"/>
-          </fieldset><fieldset className="form-group">
+          </fieldset>
+          <fieldset className="form-group">
             <label>Passord:</label>
             <input {...password} className="form-control"/>
           </fieldset>
