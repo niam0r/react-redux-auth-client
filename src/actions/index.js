@@ -1,4 +1,4 @@
-
+import thunk from 'redux-thunk';
 
 export function signinuser({ email, password }) {
   // submit email and password to the server
