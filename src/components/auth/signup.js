@@ -15,6 +15,7 @@ class Signup extends Component {
         <fieldset className="form-group">
           <label>Password:</label>
           <input {...password} type="password" className="form-control"/>
+          {password.touched && password.error && <div className="error">{password.error}</div>}
         </fieldset>
         <fieldset className="form-group">
           <label>Confirm Password:</label>
@@ -29,7 +30,9 @@ class Signup extends Component {
 function validate(formProps) {
   const errors = {};
 
-  console.log(formProps)
+  if (formProps.password !== formProps.passwordConfirm) {
+    errors.password = "Passwords must match";
+  }
 
   return errors;
 }
