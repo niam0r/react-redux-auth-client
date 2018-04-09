@@ -8,6 +8,12 @@ import {
 
 const API_URL = 'http://localhost:3090';
 
+export function signupUser({ email, password }) {
+  return function(dispatch) {
+    axios.post(`${API_URL}/signup`, { email, password });
+  }
+}
+
 export function signinUser({ email, password }) {
   // redux-thunk give us access to dispatch
   return function(dispatch) {
